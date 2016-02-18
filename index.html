@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Unit Converter</title>
+		<link rel="stylesheet" type="text/css" href="css/mui.css"> 
+		<style>
+			body{background: #EEEEEE;			}
+
+			.title
+			{
+				margin: 5px;
+				border-bottom: 1px solid #808080;
+			}
+
+			.converter
+			{
+				display: inline-block;
+				margin: 15px;
+				background: #fff !important;
+			}
+			/**
+			 * Body CSS
+			 */
+			html,
+			body {
+			  height: 100%;
+			}
+			::-moz-selection { /* Code for Firefox */
+			    background: #1393F6;
+			    color:#fff;
+			}
+			
+			::selection {
+			    background: #1393F6;
+			    color:#fff;
+			}
+			html,
+			body,
+			input,
+			textarea,
+			buttons {
+			  -webkit-font-smoothing: antialiased;
+			  -moz-osx-font-smoothing: grayscale;
+			  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
+			}
+			
+			input{text-align: right;}
+			tr td:first-child{width:100px;padding-bottom: 5px}
+			tr td:last-child{padding:0px 0px 1px 5px;}
+			/**
+			 * Header CSS
+			 */
+			header {
+			  position: fixed;
+			  top: 0;
+			  right: 0;
+			  left: 0;
+			  z-index: 2;
+			}
+			
+			/**
+			 * Content CSS
+			 */
+			#content-wrapper {
+			  min-height: 100%;
+			
+			  /* sticky footer */
+			  margin-bottom: -100px;
+			  padding-bottom: 100px;
+			}
+			
+			
+			/**
+			 * Footer CSS
+			 */
+			footer {
+			  height: 100px;
+			  background-color: #eee;
+			  border-top: 1px solid #e0e0e0;
+			  padding-top: 35px;
+			}
+		</style>
+	</head>
+	<body>
+		<header class="mui-appbar mui--z1">
+			<div class="mui-container">
+				<h1>Unit Converter</h1>
+			</div>
+		</header>
+		<div id="content-wrapper">
+			<div class="mui-container">
+			<div class="mui--appbar-height"></div>
+		
+			<div class="converter mui-panel">
+				<h2>Typography</h2>
+	
+				<table>
+					<tbody>
+						<tr>
+							<td>Meter</td>
+							<td class="mui-textfield"><input onClick="this.select();" type="text" id="Typo_Meter" class="typography"></td><td> m</td>
+						</tr>
+						<tr>
+							<td>Centimeter</td>
+							<td class="mui-textfield"><input onClick="this.select();" type="text" id="Typo_Centimeter" class="typography"></td><td> cm</td>
+						</tr>
+						<tr>
+							<td>Millimeter</td>
+							<td class="mui-textfield"><input onClick="this.select();" type="text" id="Typo_Millimeter" class="typography"></td><td> mm</td>
+						</tr>
+						<tr>
+							<td>Inch</td>
+							<td class="mui-textfield"><input onClick="this.select();" type="text" id="Typo_Inch" class="typography"></td><td> inch</td>
+						</tr>
+						<tr>
+							<td>Pixel</td>
+							<td class="mui-textfield"><input onClick="this.select();" type="text" id="Typo_Pixel" class="typography"></td><td> px</td>
+						</tr>
+						<tr>
+							<td>Pt</td>
+							<td class="mui-textfield"><input onClick="this.select();" type="text" id="Typo_Pt" class="typography"></td><td> pt</td>
+						</tr>
+						<tr>
+							<td>em</td>
+							<td class="mui-textfield"><input onClick="this.select();" type="text" id="Typo_em" class="typography"></td><td> em</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			
+		    <div class="converter mui-panel">
+				<h2>DPI Conversion</h2>
+				<table>
+					<tbody>
+						<tr>
+							<td>Pixel in 72dpi</td>
+							<td class="mui-textfield"><input onClick="this.select();" type="text" id="dpi_72" class="dpi"></td><td> px</td>
+						</tr>
+						<tr>
+							<td>Pixel in 300dpi</td>
+							<td class="mui-textfield"><input onClick="this.select();" type="text" id="dpi_300" class="dpi"></td><td> px</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			
+			
+			<div class="converter mui-panel">
+				<h2>Temperature</h2>
+				<table>
+					<tbody>
+						<tr>
+							<td>Celsius</td>
+							<td class="mui-textfield"><input onClick="this.select();" type="text" id="Temp_C" class="Temp"></td><td> &deg;C</td>
+						</tr>
+						<tr>
+							<td>Fahrenheit</td>
+							<td class="mui-textfield"><input onClick="this.select();" type="text" id="Temp_F" class="Temp"></td><td> &deg;F</td>
+						</tr>
+						<tr>
+							<td>Kelvin</td>
+							<td class="mui-textfield"><input onClick="this.select();" type="text" id="Temp_K" class="Temp"></td><td> &nbsp;K</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			
+			
+			
+			
+			
+			</div>
+		</div>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="js/script.js"></script>
+	</body>
+</html>
