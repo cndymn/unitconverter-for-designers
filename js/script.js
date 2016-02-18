@@ -12,7 +12,7 @@ $(function(){
 
 function Typography_Calculate()
 {
-	var Meter,Centimeter,Millimeter,Pixel,Inch,Pt,em;
+	var Meter,Centimeter,Millimeter,Pixel72,Inch,Pt,em;
 	var Value;
 
 
@@ -32,7 +32,7 @@ function Typography_Calculate()
 			Meter = Value;
 			Centimeter = Meter * 100;
 			Millimeter = Meter * 1000;
-			Pixel = Meter * 3779.527559055;
+			Pixel72 = Meter * 2834.64566929;
 			Inch = Meter * 39.37007874016;
 			Pt = Meter * 2834.645669291;
 			em = Meter * 2845.275590551;
@@ -41,7 +41,7 @@ function Typography_Calculate()
 			Centimeter = Value;
 			Meter = Centimeter * 0.01;
 			Millimeter = Centimeter * 10;
-			Pixel = Centimeter * 37.79527559055;
+			Pixel72 = Centimeter * 28.3464566929;
 			Inch = Centimeter * 0.3937007874016;
 			Pt = Centimeter * 28.34645669291;
 			em = Centimeter * 28.45275590551;
@@ -50,23 +50,23 @@ function Typography_Calculate()
 			Millimeter = Value;
 			Centimeter = Millimeter * 0.1;
 			Meter = Millimeter * 0.001;
-			Pixel = Millimeter * 3.779527559055;
+			Pixel72 = Millimeter * 2.8346456693;
 			Inch = Millimeter * 0.03937007874016;
 			Pt = Millimeter * 2.834645669291;
 			em = Millimeter * 2.845275590551;
 		break;
-		case 'Typo_Pixel':
-			Pixel = Value;
-			Millimeter = Pixel * 0.26458333333333;
-			Centimeter = Pixel * 0.02645833333333;
-			Meter = Pixel * 0.0002645833333333;
-			Inch = Pixel * 0.01041666666667;
-			Pt = Pixel * 0.75;
-			em = Pixel * 0.7528125;
+		case 'Typo_Pixel72':
+			Pixel72 = Value;
+			Millimeter = Pixel72 * 0.3527777778;
+			Centimeter = Pixel72 * 0.0352777778; 
+			Meter = Pixel72 * 0.000352777778;
+			Inch = Pixel72 * 0.0138888889;
+			Pt = Pixel72;
+			em = Pixel72 * 0.063;
 		break;
 		case 'Typo_Inch':
 			Inch = Value;
-			Pixel = Inch * 95.999999365;
+			Pixel72 = Inch * 72;
 			Pt = Inch * 71.9999995174;
 			Centimeter = Inch * 2.54;
 			Millimeter = Centimeter * 10;
@@ -75,7 +75,7 @@ function Typography_Calculate()
 		break;
 		case 'Typo_Pt':
 			Pt = Value;
-			Pixel = Pt * 1.333333333333;
+			Pixel72 = Pt;
 			Inch = Pt * 0.01388888888889;
 			Millimeter = Pt * 0.3527777777778;
 			Centimeter = Millimeter / 10;
@@ -84,7 +84,7 @@ function Typography_Calculate()
 		break;
 		case 'Typo_em':
 			em = Value;
-			Pixel = em * 1.328352013284;
+			Pixel72 = em * 16;
 			Inch = em * 0.01383700013837;
 			Millimeter = em * 0.3514598035146;
 			Centimeter = Millimeter / 10;
@@ -98,7 +98,7 @@ function Typography_Calculate()
 	Meter = Math.round(Meter * 100000000) / 100000000;
 	Centimeter = Math.round(Centimeter * 1000) / 1000;
 	Millimeter = Math.round(Millimeter * 1000) / 1000;
-	Pixel = Math.round(Pixel * 1000) / 1000;
+	Pixel72 = Math.round(Pixel72 * 1000) / 1000;
 	Inch = Math.round( Inch * 1000) / 1000;
 	Pt = Math.round(Pt * 1000) / 1000;
 	em = Math.round(em * 1000) / 1000;
@@ -108,7 +108,7 @@ function Typography_Calculate()
 	$('#Typo_Meter').not($(this)).val(Meter);
 	$('#Typo_Centimeter').not($(this)).val(Centimeter);
 	$('#Typo_Millimeter').not($(this)).val(Millimeter);
-	$('#Typo_Pixel').not($(this)).val(Pixel);
+	$('#Typo_Pixel72').not($(this)).val(Pixel72);
 	$('#Typo_Inch' ).not($(this)).val(Inch);
 	$('#Typo_Pt').not($(this)).val(Pt);
 	$('#Typo_em').not($(this)).val(em);
@@ -185,12 +185,12 @@ function Dpi_Calculate()
 	{
 		case 'dpi_72':
 			dpi72 = Value;
-			dpi300 = dpi72 / 2;
+			dpi300 = dpi72 * 0.24;
 		break;
 
 		case 'dpi_300':
 			dpi300 = Value;
-			dpi72 = dpi300 / 2;
+			dpi72 = dpi300 * 4.16;
 		break;
 
 	}
