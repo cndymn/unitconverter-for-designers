@@ -61,7 +61,7 @@ function Typography_Calculate()
 			Centimeter = Pixel72 * 0.0352777778; 
 			Meter = Pixel72 * 0.000352777778;
 			Inch = Pixel72 * 0.0138888889;
-			Pt = Pixel72;
+			Pt = Pixel72 * 1.33333333;
 			em = Pixel72 * 0.063;
 		break;
 		case 'Typo_Inch':
@@ -75,7 +75,7 @@ function Typography_Calculate()
 		break;
 		case 'Typo_Pt':
 			Pt = Value;
-			Pixel72 = Pt;
+			Pixel72 = Pt * 0.75;
 			Inch = Pt * 0.01388888888889;
 			Millimeter = Pt * 0.3527777777778;
 			Centimeter = Millimeter / 10;
